@@ -2,7 +2,7 @@ package org.xmobile.framework.utils;
 
 public final class Log {
 	
-	private static final String TAG = "HealthCenter";
+	private static final String TAG = "XMobile";
 	private static boolean mbLoggable = true; 
 	
 	public static void setLoggable(boolean bLoggable){
