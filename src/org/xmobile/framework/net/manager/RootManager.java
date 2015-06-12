@@ -62,7 +62,7 @@ public class RootManager{
 	
 	//////////////////////////////////////////////////////////////////////////////////////////
 	private static RootManager mInstance = null;
-	public static RootManager getInstance(){
+	public synchronized static RootManager getInstance(){
 		if(mInstance == null){
 			mInstance = new RootManager();
 		}

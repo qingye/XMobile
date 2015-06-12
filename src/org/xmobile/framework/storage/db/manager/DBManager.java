@@ -56,7 +56,7 @@ public class DBManager {
 		}
 	}
 	
-	public static DBManager getInstance(){
+	public synchronized static DBManager getInstance(){
 		if(mInstance == null){
 			mInstance = new DBManager();
 		}
