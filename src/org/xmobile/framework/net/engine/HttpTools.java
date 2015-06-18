@@ -3,14 +3,8 @@ package org.xmobile.framework.net.engine;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.SocketTimeoutException;
-import java.security.KeyManagementException;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.UnrecoverableKeyException;
 import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 
 import org.apache.http.HttpEntity;
@@ -83,20 +77,8 @@ public class HttpTools {
 				trustStore.load(null, null);
 				trustStore.setCertificateEntry("trust", cer);
 				sf = new SSLSocketFactoryImp(trustStore);
-			} catch (KeyStoreException e) {
-				e.printStackTrace();
-			} catch (KeyManagementException e) {
-				e.printStackTrace();
-			} catch (UnrecoverableKeyException e) {
-				e.printStackTrace();
-			} catch (NoSuchAlgorithmException e) {
-				e.printStackTrace();
-			} catch (CertificateException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			} catch (NoSuchProviderException e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+//				e.printStackTrace();
 			}
 		}
 		
@@ -122,18 +104,8 @@ public class HttpTools {
 					KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
 					trustStore.load(null, null);
 					sf = new SSLSocketFactoryImp(trustStore);
-				} catch (KeyStoreException e) {
-					e.printStackTrace();
-				} catch (KeyManagementException e) {
-					e.printStackTrace();
-				} catch (UnrecoverableKeyException e) {
-					e.printStackTrace();
-				} catch (NoSuchAlgorithmException e) {
-					e.printStackTrace();
-				} catch (CertificateException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
+				} catch (Exception e) {
+//					e.printStackTrace();
 				}
 			}
 
